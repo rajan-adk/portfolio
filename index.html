@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lebenslauf – Rajan Adhikari</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajan Adhikari – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -15,210 +15,155 @@
     }
 
     body {
-      background-color: #f3f4f6;
+      background: #fff;
       color: #1f2937;
-      line-height: 1.6;
-      cursor: none;
-      overflow-x: hidden;
-    }
-
-    .cursor {
-      width: 20px;
-      height: 20px;
-      border: 2px solid #2563eb;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease;
-      z-index: 1000;
-    }
-
-    header {
-      background-color: #1e40af;
-      color: white;
       padding: 2rem;
-      text-align: center;
-      animation: fadeIn 1s ease-in-out;
+      line-height: 1.6;
     }
 
-    header h1 {
-      font-size: 2.5rem;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
     }
 
-    header p {
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .header h1 span {
+      margin-left: 0.5rem;
+      animation: wave 2s infinite;
+      display: inline-block;
+    }
+
+    .header p {
+      font-size: 1.25rem;
       margin-top: 0.5rem;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 9999px;
+      object-fit: cover;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section p,
+    .section li {
+      color: #4b5563;
       font-size: 1rem;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      animation: slideUp 1s ease-in-out;
+    .section li {
+      margin-bottom: 0.5rem;
     }
 
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      color: #1e3a8a;
-      border-bottom: 2px solid #60a5fa;
+    .experience-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .experience-item div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
-    li {
-      margin-bottom: 1rem;
-      background-color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+    .experience-item img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
     }
 
-    li:hover {
-      transform: translateY(-5px);
+    a {
+      color: #2563eb;
+      text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1e40af;
-      color: white;
-      margin-top: 3rem;
-    }
-
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-    }
-
-    a.button:hover {
-      background-color: #1d4ed8;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes wave {
+      0% { transform: rotate(0.0deg) }
+      10% { transform: rotate(14.0deg) }
+      20% { transform: rotate(-8.0deg) }
+      30% { transform: rotate(14.0deg) }
+      40% { transform: rotate(-4.0deg) }
+      50% { transform: rotate(10.0deg) }
+      60% { transform: rotate(0.0deg) }
+      100% { transform: rotate(0.0deg) }
     }
   </style>
 </head>
 
 <body>
-  <div class="cursor" id="cursor"></div>
-  <header>
-    <h1>Rajan Adhikari</h1>
-    <p>Mechatronik & Robotik | Softwareentwicklung | Embedded Systems</p>
-  </header>
-
-  <div class="container">
-    <section>
-      <h2>Kontakt</h2>
-      <p>Adresse: Holtenser Straße 43, 30952, Ronnenberg</p>
-      <p>Email: <a href="mailto:rajan_adhikari@outlook.de">rajan_adhikari@outlook.de</a></p>
-      <p>Telefon: +49 17687668278</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/0ra0/" target="_blank">Profil</a> | Xing: <a href="https://www.xing.com/profile/Rajan_Adhikari" target="_blank">Profil</a></p>
-    </section>
-
-    <section>
-      <h2>Praxiserfahrung</h2>
-      <ul>
-        <li>
-          <strong>Abschlussarbeit – Institut match</strong> (März 2024 – September 2024, Hannover)<br>
-          Evaluierung und Implementierung von Skill-Frameworks in ROS2.
-        </li>
-        <li>
-          <strong>HiWi – Institut match</strong> (Dezember 2022 – Februar 2024, Hannover)<br>
-          Entwicklung mobiler Robotiklösungen mit C++, Python und ROS.
-        </li>
-        <li>
-          <strong>Werkstudent – Nect GmbH</strong> (Juni 2022 – Oktober 2022, Hamburg)<br>
-          Softwareentwicklung für digitale Identitätslösungen.
-        </li>
-        <li>
-          <strong>Projekt – HorsePower Hannover</strong> (Mai 2022 – August 2022)<br>
-          Embedded-Software für Sensorik, Regelung und Systemintegration.
-        </li>
-        <li>
-          <strong>Praktikum – Bosch</strong> (Juli 2018 – September 2018, Berlin)<br>
-          Steuerungsalgorithmen und Sensordatenauswertung.
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Bildungsweg</h2>
-      <ul>
-        <li>B.Sc. Mechatronik – Leibniz Universität Hannover (2018 – 2024)</li>
-        <li>Studienkolleg T-Kurs – Hochschule Kaiserslautern (2017 – 2018)</li>
-        <li>Sainik Awasiya Mahavidhyalaya – Nepal (2003 – 2015)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Fachliche Kompetenzen</h2>
-      <ul>
-        <li>Robotik: ROS2, Gazebo, RViz</li>
-        <li>Programmierung: C/C++, Python, MATLAB</li>
-        <li>Embedded Systems: Arduino, ESP32, Raspberry Pi</li>
-        <li>Software: Git, Visual Studio, FreeRTOS</li>
-        <li>Webentwicklung: HTML, CSS, JavaScript, WordPress</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Soft Skills & Sprachen</h2>
-      <ul>
-        <li>Teamfähigkeit, Selbstständigkeit, Problemlösungskompetenz</li>
-        <li>Deutsch: Sehr gut | Englisch: Sehr gut</li>
-      </ul>
-    </section>
-
-    <a href="#" class="button">PDF Herunterladen</a>
+  <div class="header">
+    <div>
+      <h1>Hi, I'm Rajan <span>👋</span></h1>
+      <p>Mechatronics Engineer turned Developer. I love building tech and robotics solutions.</p>
+    </div>
+    <img class="avatar" src="https://via.placeholder.com/100" alt="Rajan Adhikari" />
   </div>
 
-  <footer>
-    &copy; 2025 Rajan Adhikari
-  </footer>
+  <div class="section">
+    <h2>About</h2>
+    <p>As a Mechatronics Engineer with a strong foundation in robotics, embedded systems, and software development, I've contributed to various academic and industry projects. From building embedded systems for autonomous vehicles to developing ROS2 frameworks, my goal is to merge innovation with impactful engineering.</p>
+  </div>
 
-  <script>
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-  </script>
+  <div class="section">
+    <h2>Work Experience</h2>
+    <div class="experience-item">
+      <div>
+        <img src="https://via.placeholder.com/32" alt="match" />
+        <div>
+          <strong>Institut match</strong> – Abschlussarbeit<br />
+          ROS2 Framework Development
+        </div>
+      </div>
+      <span>März 2024 - Sep 2024</span>
+    </div>
+    <div class="experience-item">
+      <div>
+        <img src="https://via.placeholder.com/32" alt="match" />
+        <div>
+          <strong>Institut match</strong> – HiWi<br />
+          Mobile Robotik, C++, Python, ROS
+        </div>
+      </div>
+      <span>Dez 2022 - Feb 2024</span>
+    </div>
+    <div class="experience-item">
+      <div>
+        <img src="https://via.placeholder.com/32" alt="Nect" />
+        <div>
+          <strong>Nect GmbH</strong> – Werkstudent<br />
+          Digitale Identitätslösungen
+        </div>
+      </div>
+      <span>Juni 2022 - Okt 2022</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li>B.Sc. Mechatronik – Leibniz Universität Hannover (2018–2024)</li>
+      <li>Studienkolleg T-Kurs – Hochschule Kaiserslautern (2017–2018)</li>
+      <li>Sainik Awasiya Mahavidhyalaya, Nepal (2003–2015)</li>
+    </ul>
+  </div>
 </body>
 
 </html>
